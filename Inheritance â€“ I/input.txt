@@ -1,0 +1,21 @@
+var fs = require('fs');
+var input=fs.readFileSync('product.txt').toString().trim().split('\n');
+//fill your code
+let count=0;
+
+for(let i=0;i<=4;i++){
+    var arr=input[i].trim().split(",");
+    var o=new Object();
+    o.name=arr[1];
+    o.price=arr[2];
+    o.country=arr[3];
+//    console.log(arr[3]);
+  //  console.log(input[5]);
+    if(arr[3]==input[5]){
+        console.log(o);
+        count=count+1;
+    }  
+}
+if(count===0){
+        console.log(`No products available for given country`);
+    }
