@@ -1,0 +1,13 @@
+<p>test works!</p>
+<h2>Event Binding</h2> 
+<button (click)="showData($event)">Click here</button>
+ 
+<ul> 
+    <li *ngFor="let std of studentArr; trackBy: trackByData">
+       {{std.name}} 
+    </li>
+ </ul>
+ <div> 
+    <p> DigitCount Pipe </p> 
+    <h1>{{ digits | digitcount }}</h1> 
+ </div>
